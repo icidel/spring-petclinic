@@ -46,7 +46,7 @@ pipeline {
           // This'll output 3.3.3, since that's the Maven version we
           // configured above. Well, once we fix the validation error!
           sh "mvn -version" 
-        }
+        //}
       }
       
       // Post can be used both on individual stages and for the entire build.
