@@ -66,7 +66,7 @@ pipeline {
       tools {
         // Here, we're overriding the original maven tool with a different
         // version.
-        maven "mvn3.3.9"
+        maven "M3"
       }
       
       steps {
