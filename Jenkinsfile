@@ -2,14 +2,7 @@
 pipeline {
 
   // agent defines where the pipeline will run.
-  agent {
-    // This also could have been 'agent any' - that has the same meaning.
-    label ""
-    // Other possible built-in agent types are 'agent none', for not running the
-    // top-level on any agent (which results in you needing to specify agents on
-    // each stage and do explicit checkouts of scm in those stages), 'docker',
-    // and 'dockerfile'.
-  }
+  agent any
   
   // The tools directive allows you to automatically install tools configured in
   // Jenkins - note that it doesn't work inside Docker containers currently.
@@ -21,7 +14,7 @@ pipeline {
     jdk "jdk8"
     // Uh-oh, this is going to cause a validation issue! There's no configured
     // maven tool named "mvn3.3.8"!
-    maven "mvn3.3.8"
+    maven "M3"
   }
   
   environment {
